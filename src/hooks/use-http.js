@@ -5,7 +5,7 @@ function httpReducer(state, action) {
     return {
       data: null,
       error: null,
-      status: "pending",
+      status: "pending"
     };
   }
 
@@ -13,7 +13,7 @@ function httpReducer(state, action) {
     return {
       data: action.responseData,
       error: null,
-      status: "completed",
+      status: "completed"
     };
   }
 
@@ -21,7 +21,7 @@ function httpReducer(state, action) {
     return {
       data: null,
       error: action.errorMessage,
-      status: "completed",
+      status: "completed"
     };
   }
 
@@ -32,7 +32,7 @@ function useHttp(requestFunction, startWithPending = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
     status: startWithPending ? "pending" : null,
     data: null,
-    error: null,
+    error: null
   });
 
   const sendRequest = useCallback(
@@ -44,7 +44,7 @@ function useHttp(requestFunction, startWithPending = false) {
       } catch (error) {
         dispatch({
           type: "ERROR",
-          errorMessage: error.message || "Ohnoo ada sesuatu yang error!",
+          errorMessage: error.message || "Ohnoo ada sesuatu yang error!"
         });
       }
     },
@@ -53,7 +53,7 @@ function useHttp(requestFunction, startWithPending = false) {
 
   return {
     sendRequest,
-    ...httpState,
+    ...httpState
   };
 }
 

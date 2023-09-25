@@ -18,7 +18,7 @@ const QuoteDetail = () => {
     sendRequest,
     status,
     data: loadedQuote,
-    error,
+    error
   } = useHttp(getSingleQuote, true);
 
   useEffect(() => {

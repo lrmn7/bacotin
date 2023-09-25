@@ -1,6 +1,9 @@
 node_modules/
 .env.local
 .env
+.env.development.local
+.env.development
+.env.test.local
 build
 /build
 build/

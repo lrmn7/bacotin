@@ -30,6 +30,9 @@ export const badwords = [
   "bokep",
   "bangsat",
   "puki",
+  "goblok",
+  "goblog",
+  "idiot"
 ];
 
 export const removeWords = [

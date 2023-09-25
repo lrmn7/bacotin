@@ -13,7 +13,7 @@ export async function getAllQuotes() {
   for (const key in data) {
     const quoteObj = {
       id: key,
-      ...data[key],
+      ...data[key]
     };
 
     transformedQuotes.push(quoteObj);
@@ -32,7 +32,7 @@ export async function getSingleQuote(quoteId) {
 
   const loadedQuote = {
     id: quoteId,
-    ...data,
+    ...data
   };
 
   return loadedQuote;
@@ -43,8 +43,8 @@ export async function addQuote(quoteData) {
     method: "POST",
     body: JSON.stringify(quoteData),
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
   const data = await response.json();
 
@@ -62,8 +62,8 @@ export async function addComment(requestData) {
       method: "POST",
       body: JSON.stringify(requestData.commentData),
       headers: {
-        "Content-Type": "application/json",
-      },
+        "Content-Type": "application/json"
+      }
     }
   );
   const data = await response.json();
@@ -89,7 +89,7 @@ export async function getAllComments(quoteId) {
   for (const key in data) {
     const commentObj = {
       id: key,
-      ...data[key],
+      ...data[key]
     };
 
     transformedComments.push(commentObj);
