@@ -41,4 +41,4 @@ const QuoteItem = (props) => {
 };
 
 export default QuoteItem;
-// yang ditampilkan di all quotes
+// yang ditampilkan di all quotes.
